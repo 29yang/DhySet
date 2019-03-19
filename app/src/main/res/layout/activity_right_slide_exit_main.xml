@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@mipmap/bg1"
+    tools:context="set.dhy.com.dhyset.RightSlideExit.RightSlideExitMainActivity">
+
+    <TextView
+        android:id="@+id/jump_right_slide_exit"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:text="点击跳转页面进行侧滑测试"
+        android:background="@drawable/city_item_left_bg"/>
+
+</RelativeLayout>

@@ -1,0 +1,8 @@
+<resources>
+    <dimen name="app_bar_height">180dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+    <dimen name="dp_40">40dp</dimen>
+    <dimen name="text_font_normal">16sp</dimen>
+    <dimen name="dpf_cell_height">50dp</dimen>
+</resources>

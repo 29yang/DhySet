@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="set.dhy.com.dhyset.MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/textred"
+        android:gravity="center"
+        android:text="功能集合"
+        android:textColor="@color/white" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:gravity="center_horizontal"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<TextView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="40dp"-->
+    <!--android:background="@color/textred"-->
+    <!--android:gravity="center"-->
+    <!--android:text="功能集合"-->
+    <!--android:textColor="@color/white" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/right_slide_exit"-->
+    <!--style="@style/homeItemStyle"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="40dp"-->
+    <!--android:background="@drawable/city_item_left_bg"-->
+    <!--android:gravity="center"-->
+    <!--android:text="右边缘右滑退出"-->
+    <!--android:textColor="@color/white" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/recycle_view_adapter"-->
+    <!--style="@style/homeItemStyle"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="40dp"-->
+    <!--android:background="@drawable/city_item_left_bg"-->
+    <!--android:gravity="center"-->
+    <!--android:text="万能适配器"-->
+    <!--android:textColor="@color/white" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/zhiwen"-->
+    <!--style="@style/homeItemStyle"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="40dp"-->
+    <!--android:background="@drawable/city_item_left_bg"-->
+    <!--android:gravity="center"-->
+    <!--android:text="指纹支付测试"-->
+    <!--android:textColor="@color/white" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/photoview"-->
+    <!--style="@style/homeItemStyle"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="40dp"-->
+    <!--android:background="@drawable/city_item_left_bg"-->
+    <!--android:gravity="center"-->
+    <!--android:text="图片查看器"-->
+    <!--android:textColor="@color/white" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/camera"-->
+    <!--style="@style/homeItemStyle"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="40dp"-->
+    <!--android:background="@drawable/city_item_left_bg"-->
+    <!--android:gravity="center"-->
+    <!--android:text="备份通讯录"-->
+    <!--android:textColor="@color/white" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/showtitle"-->
+    <!--style="@style/homeItemStyle"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="40dp"-->
+    <!--android:background="@drawable/city_item_left_bg"-->
+    <!--android:gravity="center"-->
+    <!--android:text="简易的顶部悬停"-->
+    <!--android:textColor="@color/white" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/jump_activity_anim"-->
+    <!--style="@style/homeItemStyle"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="40dp"-->
+    <!--android:background="@drawable/city_item_left_bg"-->
+    <!--android:gravity="center"-->
+    <!--android:text="5.0新转场动画(activity跳转)"-->
+    <!--android:textColor="@color/white" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/retrofit_rxjava_okhttp"-->
+    <!--style="@style/homeItemStyle"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="40dp"-->
+    <!--android:background="@drawable/city_item_left_bg"-->
+    <!--android:gravity="center"-->
+    <!--android:text="Retrofit＋RxJava + OkHttp封装"-->
+    <!--android:textColor="@color/white" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/wang_ge_xuanzhong"-->
+    <!--style="@style/homeItemStyle"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="40dp"-->
+    <!--android:background="@drawable/city_item_left_bg"-->
+    <!--android:gravity="center"-->
+    <!--android:text="双表头上下左右滑动，并且合并行"-->
+    <!--android:textColor="@color/white" />-->
+
+    <!--</LinearLayout>-->
+</LinearLayout>
