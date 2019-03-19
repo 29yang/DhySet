@@ -62,6 +62,9 @@ public class EasyShowTitleActivity extends AppCompatActivity {
                         //根据距离进行位移
                         if (view.getTop() <= mTitleLlHeight) {
                             mTitleLl.setY(-(mTitleLlHeight - view.getTop()));
+                            if (view.getTop()<=1){
+                                mTitle.setText("标题" + data.get(mCurrentPosition+1).getParent());
+                            }
                         } else {
                             mTitleLl.setY(0);
                         }
