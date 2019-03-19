@@ -28,7 +28,7 @@
             android:layout_margin="10dp"
             android:background="@drawable/bg_color"
             android:padding="5dp"
-            android:text="修改标题栏为不透明,需要使用状态栏为暗色调" />
+            android:text="修改标题栏为不透明（白色）,状态栏为黑色" />
 
         <TextView
             android:id="@+id/status2"
@@ -37,7 +37,7 @@
             android:layout_margin="10dp"
             android:background="@drawable/bg_color"
             android:padding="5dp"
-            android:text="修改标题栏为不透明,不需要使用状态栏为暗色调" />
+            android:text="修改标题栏为不透明（红色）,状态栏为黑色" />
 
         <TextView
             android:id="@+id/status3"
@@ -46,7 +46,7 @@
             android:layout_margin="10dp"
             android:background="@drawable/bg_color"
             android:padding="5dp"
-            android:text="修改标题栏为透明,需要使用状态栏为暗色调" />
+            android:text="修改标题栏为不透明（白色）,状态栏为白色" />
 
         <TextView
             android:id="@+id/status4"
@@ -55,7 +55,7 @@
             android:layout_margin="10dp"
             android:background="@drawable/bg_color"
             android:padding="5dp"
-            android:text="修改标题栏为透明,不需要使用状态栏为暗色调" />
+            android:text="修改标题栏为不透明（红色）,状态栏为白色" />
 
         <TextView
             android:id="@+id/status5"
@@ -64,7 +64,7 @@
             android:layout_margin="10dp"
             android:background="@drawable/bg_color"
             android:padding="5dp"
-            android:text="修改标题栏为透明状态栏为暗色调，设置状态栏文字色值为深色调" />
+            android:text="标题栏为透明状态，状态栏文字色值为黑色" />
 
         <TextView
             android:id="@+id/status6"
@@ -73,25 +73,7 @@
             android:layout_margin="10dp"
             android:background="@drawable/bg_color"
             android:padding="5dp"
-            android:text="修改标题栏为不透明状态栏为暗色调，设置状态栏文字色值为深色调" />
-
-        <TextView
-            android:id="@+id/status7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:background="@drawable/bg_color"
-            android:padding="5dp"
-            android:text="修改标题栏为透明状态栏为不暗色调，设置状态栏文字色值不为深色调" />
-
-        <TextView
-            android:id="@+id/status8"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:layout_margin="10dp"
-            android:background="@drawable/bg_color"
-            android:padding="5dp"
-            android:text="修改标题栏为不透明，设置状态栏文字色值不为深色调" />
+            android:text="标题栏为透明状态，状态栏文字色值为白色" />
 
         <TextView
             android:id="@+id/status9"

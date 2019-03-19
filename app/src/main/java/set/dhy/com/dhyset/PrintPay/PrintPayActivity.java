@@ -22,7 +22,7 @@ public class PrintPayActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_print_pay);
         ButterKnife.bind(this);
-        StatusBarUtils.setStatusBar(this,true,false);
+        StatusBarUtils.setStatusBar(this,"#ffffff",false);
         mPrintPay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

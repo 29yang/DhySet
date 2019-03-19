@@ -25,7 +25,7 @@ public class RightSlideExitMainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_right_slide_exit_main);
         ButterKnife.bind(this);
-        StatusBarUtils.setStatusBar(this,false,false);
+        StatusBarUtils.setStatusBar(this,null,false);
         StatusBarUtils.setNavigationBarColor("",this,false);
         mJumpRightSlideExit.setOnClickListener(new View.OnClickListener() {
             @Override

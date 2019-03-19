@@ -12,7 +12,7 @@ public class StateActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_state);
-        StatusBarUtils.setStatusBar(this, true, false);
+        StatusBarUtils.setStatusBar(this, "#ffffff", false);
 
 
     }

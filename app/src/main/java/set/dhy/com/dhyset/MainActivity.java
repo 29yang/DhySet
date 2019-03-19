@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity{
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
         initListener();
-        StatusBarUtils.setStatusBar(this, true, false);
+        StatusBarUtils.setStatusBar(this, "#ffffff", false);
     }
 
     //初始化监听器

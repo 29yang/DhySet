@@ -33,7 +33,7 @@ public class PhotoViewActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_photo_view);
-        StatusBarUtils.setStatusBar(this, false, true);
+        StatusBarUtils.setStatusBar(this, null, true);
         ButterKnife.bind(this);
         mToolbar.setHeight(StatusBarUtils.getStatusBarHeight(this));
         Intent intent = getIntent();
