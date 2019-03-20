@@ -29,14 +29,14 @@ import set.dhy.com.dhyset.R;
  * 当设置底部导航栏透明时，没有    android:fitsSystemWindows="true" 属性时会被虚拟按键遮挡布局，虚拟按键会显示总布局的颜色
  * 但是当设置为不透明自定义颜色时不设置    android:fitsSystemWindows="true"属性也不会遮挡布局
  */
-
+@SuppressWarnings("all")
 public class StatusBarUtils {
-    public static int screenWidth;
-    public static int screenHeight;
-    public static int navigationHeight = 0;
+    private static int screenWidth;
+    private static int screenHeight;
+    private static int navigationHeight = 0;
 
     private static DisplayMetrics mMetrics;
-    public static final String HOME_CURRENT_TAB_POSITION = "HOME_CURRENT_TAB_POSITION";
+    private static final String HOME_CURRENT_TAB_POSITION = "HOME_CURRENT_TAB_POSITION";
 
     /**
      * 通过反射的方式获取状态栏高度

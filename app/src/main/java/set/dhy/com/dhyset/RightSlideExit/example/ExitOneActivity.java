@@ -24,6 +24,8 @@ public class ExitOneActivity extends RightSlideBaseActivity implements View.OnCl
     TextView mStatus5;
     @BindView(R.id.status6)
     TextView mStatus6;
+    @BindView(R.id.status8)
+    TextView mStatus8;
     @BindView(R.id.status9)
     TextView mStatus9;
     @BindView(R.id.status10)
@@ -45,6 +47,7 @@ public class ExitOneActivity extends RightSlideBaseActivity implements View.OnCl
         mStatus4.setOnClickListener(this);
         mStatus5.setOnClickListener(this);
         mStatus6.setOnClickListener(this);
+        mStatus8.setOnClickListener(this);
         mStatus9.setOnClickListener(this);
         mStatus10.setOnClickListener(this);
     }
@@ -70,8 +73,11 @@ public class ExitOneActivity extends RightSlideBaseActivity implements View.OnCl
             case R.id.status6: //标题栏为透明状态，状态栏文字色值为白色
                 StatusBarUtils.setStatusBar(this, null, false);
                 break;
+                case R.id.status8: //修改底部虚拟按键为不透明 绿色
+                StatusBarUtils.setNavigationBarColor("#00ff00", this, true);
+                break;
                 case R.id.status9: //虚拟按键透明
-                StatusBarUtils.setNavigationBarColor("#00000000", this, false);
+                StatusBarUtils.setNavigationBarColor("", this, false);
                 break;
             case R.id.status10: //虚拟按键不透明
                 StatusBarUtils.setNavigationBarColor("#ff0000", this, true);

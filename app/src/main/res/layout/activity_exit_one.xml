@@ -76,6 +76,15 @@
             android:text="标题栏为透明状态，状态栏文字色值为白色" />
 
         <TextView
+            android:id="@+id/status8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/bg_color"
+            android:padding="5dp"
+            android:text="修改底部虚拟按键为不透明 绿色" />
+
+        <TextView
             android:id="@+id/status9"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
@@ -91,7 +100,7 @@
             android:layout_margin="10dp"
             android:background="@drawable/bg_color"
             android:padding="5dp"
-            android:text="10:修改底部虚拟按键为不透明 粉红色" />
+            android:text="修改底部虚拟按键为不透明 粉红色" />
 
     </LinearLayout>
 </ScrollView>
