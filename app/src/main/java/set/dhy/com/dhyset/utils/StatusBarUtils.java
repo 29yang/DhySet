@@ -286,7 +286,7 @@ public class StatusBarUtils {
      * 设置底部导航栏的颜色
      *
      * @param color                 要显示的虚拟按键的颜色
-     * @param useNavigationBarColor 是否需要虚拟按键为透明色
+     * @param useNavigationBarColor 是否需要虚拟按键为透明色  true自定义颜色 false透明
      */
     public static void setNavigationBarColor(String color, Activity activity, boolean useNavigationBarColor) {
         //检查是否存在底部导航栏

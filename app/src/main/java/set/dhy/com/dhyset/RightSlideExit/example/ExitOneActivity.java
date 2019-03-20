@@ -74,7 +74,7 @@ public class ExitOneActivity extends RightSlideBaseActivity implements View.OnCl
                 StatusBarUtils.setNavigationBarColor("#00000000", this, false);
                 break;
             case R.id.status10: //虚拟按键不透明
-                StatusBarUtils.setNavigationBarColor("#EC6D65", this, true);
+                StatusBarUtils.setNavigationBarColor("#ff0000", this, true);
                 break;
         }
 
