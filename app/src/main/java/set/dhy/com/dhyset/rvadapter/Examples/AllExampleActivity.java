@@ -25,7 +25,7 @@ public class AllExampleActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_all_example);
         ButterKnife.bind(this);
-        StatusBarUtils.setStatusBar(this,"#ffffff",false);
+        StatusBarUtils.setStatusBar(this,"#ffffff",true);
 
         initView();
     }

@@ -12,7 +12,7 @@ public class HomePageActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
-        StatusBarUtils.setStatusBar(this, "#ffffff", false);
-        getSupportFragmentManager().beginTransaction().add(R.id.home_frame, new HomePageFrame()).commit();
+        StatusBarUtils.setStatusBar(this, "#ffffff", true);
+
     }
 }
