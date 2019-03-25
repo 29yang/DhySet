@@ -32,7 +32,7 @@ import set.dhy.com.dhyset.rvadapter.Examples.AllExampleActivity;
 import set.dhy.com.dhyset.shuang_biao_tou.TwoTitleActivity;
 import set.dhy.com.dhyset.utils.StatusBarUtils;
 
-public class MainActivity extends AppCompatActivity{
+public class MainActivity extends AppCompatActivity {
 
     private static final int MY_PERMISSION_REQUEST_CODE = 10000;
     @BindView(R.id.list)
@@ -53,17 +53,17 @@ public class MainActivity extends AppCompatActivity{
     //初始化监听器
     private void initListener() {
         mData = new ArrayList<>();
-        mData.add(new mainBean("右划推出，标题导航设置",1));
-        mData.add(new mainBean("万能适配器",2));
-        mData.add(new mainBean("指纹支付测试",3));
-        mData.add(new mainBean("图片查看器",4));
-        mData.add(new mainBean("备份通讯录",5));
-        mData.add(new mainBean("简易的顶部悬停",6));
-        mData.add(new mainBean("5.0新转场动画（activity跳转）",7));
-        mData.add(new mainBean("Retrofit+Rxjava",8));
-        mData.add(new mainBean("双表头上下左右滑动，并且合并行",9));
-        mData.add(new mainBean("水波纹加载进度",10));
-        mAdapter = new MainAdapter(this,mData);
+        mData.add(new mainBean("右划推出，标题导航设置", 1));
+        mData.add(new mainBean("万能适配器加下拉上拉刷新", 2));
+        mData.add(new mainBean("指纹支付测试", 3));
+        mData.add(new mainBean("图片查看器", 4));
+        mData.add(new mainBean("备份通讯录", 5));
+        mData.add(new mainBean("简易的顶部悬停", 6));
+        mData.add(new mainBean("5.0新转场动画（activity跳转）", 7));
+        mData.add(new mainBean("Retrofit+Rxjava", 8));
+        mData.add(new mainBean("双表头上下左右滑动，并且合并行", 9));
+        mData.add(new mainBean("水波纹加载进度", 10));
+        mAdapter = new MainAdapter(this, mData);
         mAdapter.setOnClick(new MainAdapter.OnClick() {
             @Override
             public void onClick(int position) {
