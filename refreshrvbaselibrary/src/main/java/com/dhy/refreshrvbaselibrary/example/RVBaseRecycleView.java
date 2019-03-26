@@ -28,6 +28,7 @@ public class RVBaseRecycleView extends RecyclerView {
     private RvRcControl mRvRcControl;
     private int isLoadMode; //加载的模式 0默认下拉和上拉刷新模式 1只有下拉刷新加载模式  2只有上拉刷新加载模式 3都不能加载模式
     private float mDmping = 0.3f;  //阻尼系数
+    private LayoutManager mLayoutManager;
 
     public void setIsLoadMode(int isLoadMode) {
         this.isLoadMode = isLoadMode;
@@ -68,15 +69,26 @@ public class RVBaseRecycleView extends RecyclerView {
         addOnScrollListener(new OnScrollListener() {
             @Override
             public void onScrollStateChanged(@NonNull RecyclerView recyclerView, int newState) {
+                mLayoutManager = recyclerView.getLayoutManager();
+//                if (mLayoutManager instanceof StaggeredGridLayoutManager)
+//                    ((StaggeredGridLayoutManager) mLayoutManager).invalidateSpanAssignments();
             }
 
             @Override
             public void onScrolled(@NonNull RecyclerView recyclerView, int dx, int dy) {
                 //这里将刷新条目的top设置0，否者在下拉达到一定值在向上滑动时会导致判断的不准备
-                if (mBaseAdapter != null && mBaseAdapter.isShowLoadRefresh() && mBaseAdapter.getLoadRefreshHeight() > 0 && !isLoadRefresh) {
+                if (mBaseAdapter != null && mBaseAdapter.isShowLoadRefresh()
+                        && mBaseAdapter.getLoadRefreshHeight() > 0 && !isLoadRefresh
+                        && (mBaseAdapter.getData().get(0) instanceof LoadRefreshCell)) {
                     View childAt = getChildAt(0);
-                    if (childAt != null)
-                        childAt.setTop(0);
+                    if (mBaseAdapter.getLoadRefreshHeight() > 0)
+                        if (childAt != null && mFirstVisiblePosition == 0) {
+                            if (mLayoutManager instanceof StaggeredGridLayoutManager) {
+                                mLayoutManager.scrollToPosition(mFirstVisiblePosition);
+                            } else {
+                                childAt.setTop(0);
+                            }
+                        }
                 }
                 //在滚动的时候 获取最后一个item的position
                 LayoutManager layoutManager = getLayoutManager();
@@ -149,11 +161,7 @@ public class RVBaseRecycleView extends RecyclerView {
             oldHeight = mBaseAdapter.getLoadRefreshHeight();
         }
         float heights = oldHeight + height;
-        if (heights < 2) {
-            mBaseAdapter.hideLoadRefresh();
-        } else {
-            mBaseAdapter.showLoadRefresh(heights);
-        }
+        mBaseAdapter.showLoadRefresh(heights < 0 ? 0 : heights);
     }
 
     private float mLastY;
@@ -180,7 +188,9 @@ public class RVBaseRecycleView extends RecyclerView {
                     int itemCount = manager.getItemCount();
                     //因为LoadMore View  是Adapter的一个Item,显示LoadMore 的时候，Item数量＋1了，导致 mLastVisibalePosition == itemCount-1
                     // 判断两次都成立，因此必须加一个判断条件 !mBaseAdapter.isShowLoadMore()
-                    if (mLastVisiblePosition >= itemCount - 1 && isFullScreen && canShowLoadMore() && (isLoadMode == 0 || isLoadMode == 2)) {
+                    if (mLastVisiblePosition >= itemCount - 1 && isFullScreen
+                            && canShowLoadMore() && (isLoadMode == 0 || isLoadMode == 2
+                            && !isLoadMore)) {
                         //最后一个Item了
                         showLoadMore(-(distanceY > 0 ? distanceY : distanceY * mDmping));
                     }
@@ -188,14 +198,14 @@ public class RVBaseRecycleView extends RecyclerView {
                     if (mBaseAdapter.getData() != null && mBaseAdapter.getData().size() > 0
                             && !(mBaseAdapter.getData().get(0) instanceof LoadRefreshCell)
                             && mFirstVisiblePosition <= 1 && !isFullScreen && canShowRefreshMore()
-                            && (isLoadMode == 0 || isLoadMode == 1) && distanceY >= 0) {
+                            && (isLoadMode == 0 || isLoadMode == 1) && distanceY >= 0 && !isLoadRefresh) {
                         showLoadRefresh((distanceY < 0 ? distanceY : distanceY * mDmping));
                     }
                     if (mBaseAdapter.getData() != null && mBaseAdapter.getData().size() > 0
                             && (mBaseAdapter.getData().get(0) instanceof LoadRefreshCell)
-                            && canShowRefreshMore() && (isLoadMode == 0 || isLoadMode == 1)) {
+                            && mFirstVisiblePosition <= 1
+                            && canShowRefreshMore() && (isLoadMode == 0 || isLoadMode == 1) && !isLoadRefresh) {
                         showLoadRefresh((distanceY < 0 ? distanceY : distanceY * mDmping));
-
                     }
                 }
                 break;
@@ -235,6 +245,7 @@ public class RVBaseRecycleView extends RecyclerView {
                         if (mRvRcControl != null) {
                             mRvRcControl.refreshData();
                         }
+                        mLayoutManager.scrollToPosition(0);
                     } else {
                         //当松手时没有达到刷新标准时 关闭加载更多
                         mBaseAdapter.hideLoadRefresh();

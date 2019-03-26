@@ -59,7 +59,7 @@ public class HomePageActivity extends AppCompatActivity implements RVBaseRecycle
             @Override
             public void run() {
                 try {
-                    Thread.sleep(5000);
+                    Thread.sleep(2000);
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
@@ -81,7 +81,7 @@ public class HomePageActivity extends AppCompatActivity implements RVBaseRecycle
             @Override
             public void run() {
                 try {
-                    Thread.sleep(5000);
+                    Thread.sleep(2000);
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {

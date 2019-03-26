@@ -27,13 +27,16 @@ private RVSimpleAdapter mRcadapter;
         setContentView(R.layout.activity_state);
         StatusBarUtils.setStatusBar(this, "#ffffff", true);
 
-
         mRecyclerView = findViewById(R.id.recycleview);
         data = new ArrayList<>();
         mRcadapter = new RVSimpleAdapter();
         mRcadapter.setData(data);
 //        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-        mRecyclerView.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
+        StaggeredGridLayoutManager manager = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
+        //消除自带的动画（可选）
+        manager.setGapStrategy(StaggeredGridLayoutManager.GAP_HANDLING_NONE);
+        mRecyclerView.setItemAnimator(null);
+        mRecyclerView.setLayoutManager(manager);
 //        mRecyclerView.setLayoutManager(new GridLayoutManager(this,2));
         mRecyclerView.setAdapter(mRcadapter);
         mRecyclerView.setRvRcControl(this);
@@ -46,7 +49,7 @@ private RVSimpleAdapter mRcadapter;
         click();
     }
     public void click() {
-        for (int i = 0; i <6; i++) {
+        for (int i = 0; i <108; i++) {
             Entry entry = new Entry();
             entry.content = "==" + i;
             data.add(new ImageCell(entry));
@@ -62,7 +65,7 @@ private RVSimpleAdapter mRcadapter;
             @Override
             public void run() {
                 try {
-                    Thread.sleep(5000);
+                    Thread.sleep(2000);
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
@@ -84,7 +87,7 @@ private RVSimpleAdapter mRcadapter;
             @Override
             public void run() {
                 try {
-                    Thread.sleep(5000);
+                    Thread.sleep(2000);
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {

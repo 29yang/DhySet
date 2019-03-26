@@ -29,6 +29,10 @@ public abstract class RVAbsStateCell extends RVBaseCell<Object> {
         mView = view;
     }
 
+    public View getView() {
+        return mView;
+    }
+
     public void setLoadState(int Loadstate) {
         mLoadState = Loadstate;
     }
