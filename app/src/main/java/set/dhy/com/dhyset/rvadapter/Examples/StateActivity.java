@@ -40,16 +40,16 @@ private RVSimpleAdapter mRcadapter;
 //        mRecyclerView.setLayoutManager(new GridLayoutManager(this,2));
         mRecyclerView.setAdapter(mRcadapter);
         mRecyclerView.setRvRcControl(this);
+        click();
 //        mRcadapter.showLoadingKeepCount(1,400,View.inflate(this,R.layout.rv_load_more_layout,null));
 //        mRcadapter.showLoading(View.inflate(this,R.layout.rv_load_more_layout,null),200);
 //        mRcadapter.showError();
-//        mRcadapter.showEmptyKeepCount(1,200);
+        mRcadapter.showEmptyKeepCount(mRcadapter.getItemCount(),200);
 //        mRcadapter.showLoading();
         mRecyclerView.setIsLoadMode(0);
-        click();
     }
     public void click() {
-        for (int i = 0; i <108; i++) {
+        for (int i = 0; i <8; i++) {
             Entry entry = new Entry();
             entry.content = "==" + i;
             data.add(new ImageCell(entry));
@@ -70,6 +70,7 @@ private RVSimpleAdapter mRcadapter;
                         @Override
                         public void run() {
                             mRecyclerView.hideRvRcControlLoad(0);
+                            mRcadapter.showEmptyKeepCount(mRcadapter.getItemCount(),200);
                         }
                     });
                 } catch (InterruptedException e) {
@@ -92,6 +93,7 @@ private RVSimpleAdapter mRcadapter;
                         @Override
                         public void run() {
                             mRecyclerView.hideRvRcControlLoad(1);
+                            mRcadapter.hideEmpty();
                         }
                     });
                 } catch (InterruptedException e) {
