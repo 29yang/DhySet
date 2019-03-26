@@ -90,6 +90,10 @@ public class RVSimpleAdapter extends RVBaseAdapter {
                 StaggeredGridLayoutManager.LayoutParams params = (StaggeredGridLayoutManager.LayoutParams) holder.itemView.getLayoutParams();
                 //设置显示整个span
                 params.setFullSpan(true);
+            }else {
+                StaggeredGridLayoutManager.LayoutParams params = (StaggeredGridLayoutManager.LayoutParams) holder.itemView.getLayoutParams();
+                //设置显示整个span
+                params.setFullSpan(false);
             }
         }
     }

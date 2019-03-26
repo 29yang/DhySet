@@ -4,7 +4,6 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.dhy.refreshrvbaselibrary.DensityUtil;
@@ -76,11 +75,8 @@ public class LoadMoreCell extends RVAbsStateCell {
     @Override
     public View getDefaultView(Context context) {
         // 设置LoadMore View显示的默认高度
-//        setHeight(DensityUtil.dpToPx(context, mHeight));
+        setHeight(DensityUtil.dpToPx(context, mHeight));
         mInflate = LayoutInflater.from(context).inflate(R.layout.rv_load_more_layout, null);
-        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-//        layoutParams.height = 0;
-        mInflate.setLayoutParams(layoutParams);
         mTextview = mInflate.findViewById(R.id.rv_load_more_text);
         return mInflate;
     }
