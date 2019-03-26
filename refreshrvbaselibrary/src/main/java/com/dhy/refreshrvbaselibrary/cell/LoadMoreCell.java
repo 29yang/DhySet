@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.dhy.refreshrvbaselibrary.DensityUtil;
@@ -49,10 +50,10 @@ public class LoadMoreCell extends RVAbsStateCell {
                 //当mState没有处于加载中的时候才可以实现阻尼效果
                 ViewGroup.LayoutParams layoutParams = mInflate.getLayoutParams();
                 //上拉 和释放加载更多状态的一个阈值
-                if (height <= DensityUtil.dpToPx(mInflate.getContext(), 80)) {
+                if (height <= DensityUtil.dpToPx(mInflate.getContext(), 50)) {
                     if (mTextview != null)
                         mTextview.setText("上拉加载更多");
-                } else if (height > DensityUtil.dpToPx(mInflate.getContext(), 80)) {
+                } else if (height > DensityUtil.dpToPx(mInflate.getContext(), 50)) {
                     if (mTextview != null)
                         mTextview.setText("释放立即加载");
                 }
@@ -75,8 +76,11 @@ public class LoadMoreCell extends RVAbsStateCell {
     @Override
     public View getDefaultView(Context context) {
         // 设置LoadMore View显示的默认高度
-        setHeight(DensityUtil.dpToPx(context, mHeight));
+//        setHeight(DensityUtil.dpToPx(context, mHeight));
         mInflate = LayoutInflater.from(context).inflate(R.layout.rv_load_more_layout, null);
+        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+//        layoutParams.height = 0;
+        mInflate.setLayoutParams(layoutParams);
         mTextview = mInflate.findViewById(R.id.rv_load_more_text);
         return mInflate;
     }

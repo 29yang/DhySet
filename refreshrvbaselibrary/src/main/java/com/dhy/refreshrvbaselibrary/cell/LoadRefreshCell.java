@@ -39,10 +39,10 @@ public class LoadRefreshCell extends RVAbsStateCell {
             //当mState没有处于加载中的时候才可以实现阻尼效果
             ViewGroup.LayoutParams layoutParams = mInflate.getLayoutParams();
             //上拉 和释放加载更多状态的一个阈值
-            if (height <= DensityUtil.dpToPx(mInflate.getContext(), 80)) {
+            if (height <= DensityUtil.dpToPx(mInflate.getContext(), 50)) {
                 if (mTextview != null)
                     mTextview.setText("下拉刷新");
-            } else if (height > DensityUtil.dpToPx(mInflate.getContext(), 80)) {
+            } else if (height > DensityUtil.dpToPx(mInflate.getContext(), 50)) {
                 if (mTextview != null)
                     mTextview.setText("释放刷新");
             }

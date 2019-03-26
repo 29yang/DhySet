@@ -27,6 +27,7 @@ public class RVBaseRecycleView extends RecyclerView {
     private boolean isLoadRefresh; //是否处于下拉加载的状态
     private RvRcControl mRvRcControl;
     private int isLoadMode; //加载的模式 0默认下拉和上拉刷新模式 1只有下拉刷新加载模式  2都不能加载模式
+    private float mDmping = 0.3f;  //阻尼系数
 
     public void setIsLoadMode(int isLoadMode) {
         this.isLoadMode = isLoadMode;
@@ -72,11 +73,18 @@ public class RVBaseRecycleView extends RecyclerView {
             @Override
             public void onScrolled(@NonNull RecyclerView recyclerView, int dx, int dy) {
                 //这里将刷新条目的top设置0，否者在下拉达到一定值在向上滑动时会导致判断的不准备
-                if (mBaseAdapter != null && mBaseAdapter.isShowLoadRefresh() && mBaseAdapter.getLoadRefreshHeight() > 0 && !isLoadRefresh) {
+                if (mBaseAdapter != null && mBaseAdapter.isShowLoadRefresh()
+                        && mBaseAdapter.getLoadRefreshHeight() > 0 && !isLoadRefresh
+                        && (mBaseAdapter.getData().get(0) instanceof LoadRefreshCell)) {
                     View childAt = getChildAt(0);
                     if (childAt != null)
                         childAt.setTop(0);
                 }
+//                if (mBaseAdapter != null && mBaseAdapter.isShowLoadMore() && mBaseAdapter.getLoadMoreHeight() > 0 && !isLoadMore) {
+//                    View childAt = getChildAt(mBaseAdapter.getItemCount()-1);
+//                    if (childAt != null)
+//                        childAt.setBottom(0);
+//                }
                 //在滚动的时候 获取最后一个item的position
                 LayoutManager layoutManager = getLayoutManager();
                 if (layoutManager instanceof LinearLayoutManager) {
@@ -136,6 +144,7 @@ public class RVBaseRecycleView extends RecyclerView {
         if (mBaseAdapter.isShowLoadMore()) {
             oldHeight = mBaseAdapter.getLoadMoreHeight();
         }
+        System.out.println("====" + DensityUtil.px2dp(getContext(), oldHeight + height));
         mBaseAdapter.showLoadMore(oldHeight + height);
     }
 
@@ -175,20 +184,20 @@ public class RVBaseRecycleView extends RecyclerView {
                     //因为LoadMore View  是Adapter的一个Item,显示LoadMore 的时候，Item数量＋1了，导致 mLastVisibalePosition == itemCount-1
                     // 判断两次都成立，因此必须加一个判断条件 !mBaseAdapter.isShowLoadMore()
                     if (mLastVisiblePosition >= itemCount - 1 && isFullScreen && canShowLoadMore() && isLoadMode < 1) {
-                        //最后一个Item了
-                        showLoadMore(-distanceY);
+                        //最后一个Item了 设置高度上拉时可以乘以阻尼系数，但是下滑时不能
+                        showLoadMore(-(distanceY > 0 ? distanceY : distanceY * mDmping));
                     }
                     //两个if均是判断到达顶部下拉刷新出现的条件  第一个是未添加下拉布局 第二个是已经存在下拉布局
                     if (mBaseAdapter.getData() != null && mBaseAdapter.getData().size() > 0
                             && !(mBaseAdapter.getData().get(0) instanceof LoadRefreshCell)
                             && mFirstVisiblePosition <= 1 && !isFullScreen && canShowRefreshMore()
                             && isLoadMode < 2 && distanceY >= 0) {
-                        showLoadRefresh(distanceY);
+                        showLoadRefresh((distanceY < 0 ? distanceY : distanceY * mDmping));
                     }
                     if (mBaseAdapter.getData() != null && mBaseAdapter.getData().size() > 0
                             && (mBaseAdapter.getData().get(0) instanceof LoadRefreshCell)
                             && canShowRefreshMore() && isLoadMode < 2) {
-                        showLoadRefresh(distanceY);
+                        showLoadRefresh((distanceY < 0 ? distanceY : distanceY * mDmping));
 
                     }
                 }
@@ -198,7 +207,7 @@ public class RVBaseRecycleView extends RecyclerView {
                 if (mBaseAdapter.isShowLoadMore() && !isLoadMore) {
                     //当加载更过状态存在时并且没有处于加载中的时候才会触发
                     float v1 = DensityUtil.px2dp(getContext(), mBaseAdapter.getLoadMoreHeight());
-                    if (v1 >= 80) {
+                    if (v1 >= 50) {
                         //当松手时达到了刷新标准时 打开加载更多
                         mBaseAdapter.showLoadMore(DensityUtil.dp2px(getContext(), 50));
                         mBaseAdapter.setShowLoadMoreState(1);
@@ -218,7 +227,7 @@ public class RVBaseRecycleView extends RecyclerView {
                 //如果处于下拉状态中 并且没有处于 刷新中
                 if (mBaseAdapter.isShowLoadRefresh() && !isLoadRefresh) {
                     float v2 = DensityUtil.px2dp(getContext(), mBaseAdapter.getLoadRefreshHeight());
-                    if (v2 >= 80) {
+                    if (v2 >= 50) {
                         //当松手时达到了刷新标准时 打开加载更多
                         mBaseAdapter.showLoadRefresh(DensityUtil.dp2px(getContext(), 50));
                         mBaseAdapter.setShowLoadRefreshState(1);
