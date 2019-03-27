@@ -17,6 +17,8 @@ import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.View;
 import android.widget.Toast;
 
+import com.dhy.utilscorelibrary.status_bar_util.StatusBarUtils;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -30,7 +32,6 @@ import set.dhy.com.dhyset.RightSlideExit.RightSlideExitMainActivity;
 import set.dhy.com.dhyset.WaterWave.WaveActivity;
 import set.dhy.com.dhyset.rvadapter.Examples.AllExampleActivity;
 import set.dhy.com.dhyset.shuang_biao_tou.TwoTitleActivity;
-import set.dhy.com.dhyset.utils.StatusBarUtils;
 
 public class MainActivity extends AppCompatActivity {
 

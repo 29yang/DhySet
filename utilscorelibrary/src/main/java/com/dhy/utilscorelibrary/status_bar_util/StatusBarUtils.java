@@ -1,4 +1,4 @@
-package set.dhy.com.dhyset.utils;
+package com.dhy.utilscorelibrary.status_bar_util;
 
 import android.app.Activity;
 import android.content.Context;
@@ -16,8 +16,6 @@ import android.view.WindowManager;
 import java.io.IOException;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
-
-import set.dhy.com.dhyset.R;
 
 /**
  * author dhy

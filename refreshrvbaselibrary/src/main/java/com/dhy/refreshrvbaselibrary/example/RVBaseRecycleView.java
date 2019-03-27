@@ -11,9 +11,9 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 
-import com.dhy.refreshrvbaselibrary.DensityUtil;
 import com.dhy.refreshrvbaselibrary.base.RVSimpleAdapter;
 import com.dhy.refreshrvbaselibrary.cell.LoadRefreshCell;
+import com.dhy.utilscorelibrary.DensityUtil;
 
 public class RVBaseRecycleView extends RecyclerView {
 

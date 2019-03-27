@@ -6,11 +6,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
+import com.dhy.utilscorelibrary.status_bar_util.StatusBarUtils;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import set.dhy.com.dhyset.R;
 import set.dhy.com.dhyset.RightSlideExit.example.ExitOneActivity;
-import set.dhy.com.dhyset.utils.StatusBarUtils;
 
 /**
  * 展示右滑退出的功能，首页面

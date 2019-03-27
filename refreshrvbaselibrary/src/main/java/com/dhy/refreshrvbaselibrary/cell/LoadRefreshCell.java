@@ -7,10 +7,10 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.dhy.refreshrvbaselibrary.DensityUtil;
 import com.dhy.refreshrvbaselibrary.R;
 import com.dhy.refreshrvbaselibrary.base.OftenViewType;
 import com.dhy.refreshrvbaselibrary.base.RVBaseViewHolder;
+import com.dhy.utilscorelibrary.DensityUtil;
 
 
 public class LoadRefreshCell extends RVAbsStateCell {

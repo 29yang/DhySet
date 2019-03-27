@@ -6,10 +6,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+import com.dhy.utilscorelibrary.status_bar_util.StatusBarUtils;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import set.dhy.com.dhyset.R;
-import set.dhy.com.dhyset.utils.StatusBarUtils;
 
 public class AllExampleActivity extends AppCompatActivity {
 

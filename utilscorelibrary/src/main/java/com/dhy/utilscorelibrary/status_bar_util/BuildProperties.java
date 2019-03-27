@@ -1,4 +1,4 @@
-package set.dhy.com.dhyset.utils;
+package com.dhy.utilscorelibrary.status_bar_util;
 
 import android.os.Environment;
 

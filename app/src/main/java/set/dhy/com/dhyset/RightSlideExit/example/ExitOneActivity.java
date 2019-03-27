@@ -4,11 +4,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import com.dhy.utilscorelibrary.status_bar_util.StatusBarUtils;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import set.dhy.com.dhyset.R;
 import set.dhy.com.dhyset.RightSlideExit.RightSlideBaseActivity;
-import set.dhy.com.dhyset.utils.StatusBarUtils;
 
 public class ExitOneActivity extends RightSlideBaseActivity implements View.OnClickListener {
 

@@ -8,12 +8,13 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.dhy.utilscorelibrary.status_bar_util.StatusBarUtils;
+
 import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import set.dhy.com.dhyset.R;
-import set.dhy.com.dhyset.utils.StatusBarUtils;
 
 public class PhotoViewActivity extends AppCompatActivity {
 

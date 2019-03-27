@@ -1,4 +1,4 @@
-package com.dhy.refreshrvbaselibrary;
+package com.dhy.utilscorelibrary;
 
 import android.app.Activity;
 import android.content.Context;

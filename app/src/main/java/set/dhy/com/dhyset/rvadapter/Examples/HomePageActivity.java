@@ -7,6 +7,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import com.dhy.refreshrvbaselibrary.base.Cell;
 import com.dhy.refreshrvbaselibrary.base.RVSimpleAdapter;
 import com.dhy.refreshrvbaselibrary.example.RVBaseRecycleView;
+import com.dhy.utilscorelibrary.status_bar_util.StatusBarUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,7 +15,6 @@ import java.util.List;
 import set.dhy.com.dhyset.R;
 import set.dhy.com.dhyset.rvadapter.ImageCell;
 import set.dhy.com.dhyset.rvadapter.TextCell;
-import set.dhy.com.dhyset.utils.StatusBarUtils;
 
 public class HomePageActivity extends AppCompatActivity implements RVBaseRecycleView.RvRcControl {
     private RVBaseRecycleView mRecyclerView;
