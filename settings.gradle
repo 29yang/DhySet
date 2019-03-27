@@ -1,1 +1,1 @@
-include ':app', ':refreshrvbaselibrary'
+include ':app', ':refreshrvbaselibrary', ':mvplibrary'
