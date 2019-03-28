@@ -15,6 +15,9 @@ import com.dhy.refreshrvbaselibrary.base.RVSimpleAdapter;
 import com.dhy.refreshrvbaselibrary.cell.LoadRefreshCell;
 import com.dhy.utilscorelibrary.DensityUtil;
 
+/**
+ * 使用三方下拉自定义的linearlayout可自定义头部和尾部 github搜索 UltimateRefreshView
+ */
 public class RVBaseRecycleView extends RecyclerView {
 
     /**
