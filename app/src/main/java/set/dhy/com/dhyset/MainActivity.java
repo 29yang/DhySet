@@ -125,6 +125,7 @@ public class MainActivity extends AppCompatActivity {
 
     //检查权限，和申请权限的功能
     private void startCanera() {
+        //使用三方框架 andpermission
         /**
          * 第 1 步: 检查是否有相应的权限
          */
