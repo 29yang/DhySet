@@ -1,4 +1,4 @@
-package com.example.tantancarddemo;
+package com.example.tantancarddemo.userecyclyview;
 
 /**
  * Created by dhy
@@ -11,7 +11,6 @@ import android.support.annotation.NonNull;
 import android.support.v4.view.MotionEventCompat;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.helper.ItemTouchHelper;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;

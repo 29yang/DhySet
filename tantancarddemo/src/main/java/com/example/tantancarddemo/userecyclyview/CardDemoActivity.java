@@ -1,4 +1,4 @@
-package com.example.tantancarddemo;
+package com.example.tantancarddemo.userecyclyview;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,6 +10,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.Toast;
+
+import com.example.tantancarddemo.R;
 
 import java.util.ArrayList;
 import java.util.List;

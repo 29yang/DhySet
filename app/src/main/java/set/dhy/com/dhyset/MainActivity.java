@@ -13,12 +13,10 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.StaggeredGridLayoutManager;
-import android.view.View;
 import android.widget.Toast;
 
 import com.dhy.utilscorelibrary.status_bar_util.StatusBarUtils;
-import com.example.tantancarddemo.CardDemoActivity;
+import com.example.tantancarddemo.userecyclyview.CardDemoActivity;
 
 import java.util.ArrayList;
 import java.util.List;

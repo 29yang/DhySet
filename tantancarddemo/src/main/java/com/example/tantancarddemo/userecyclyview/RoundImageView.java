@@ -1,4 +1,4 @@
-package com.example.tantancarddemo;
+package com.example.tantancarddemo.userecyclyview;
 
 /**
  * Created by dhy
@@ -17,6 +17,8 @@ import android.graphics.RectF;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
+
+import com.example.tantancarddemo.R;
 
 /**
  * 自定义图片样式，顶部圆角显示

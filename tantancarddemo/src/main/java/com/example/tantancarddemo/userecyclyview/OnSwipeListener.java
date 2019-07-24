@@ -1,4 +1,4 @@
-package com.example.tantancarddemo;
+package com.example.tantancarddemo.userecyclyview;
 
 import android.support.v7.widget.RecyclerView;
 

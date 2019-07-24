@@ -3,7 +3,7 @@
     package="com.example.tantancarddemo">
 
     <application>
-        <activity android:name=".CardDemoActivity" />
+        <activity android:name=".userecyclyview.CardDemoActivity" />
     </application>
 
 </manifest>
