@@ -1,0 +1,7 @@
+mvplibary: mvp使用的demo
+refreshrvbaselibrary：封装通用的适配器
+tantancarddemo:recycleview实现类似探探卡片切换效果的demo
+utilscorelibrary:
+                    sputil: sharepreference存储的封装工具类其中用到了 DES3加解密
+                    status_bar_util: 改变状态栏或者底部虚拟按键的工具类
+                    ConverterUtil：类型转换器工具
