@@ -18,6 +18,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.dhy.utilscorelibrary.status_bar_util.StatusBarUtils;
+import com.example.tantancarddemo.CardDemoActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -64,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
         mData.add(new mainBean("Retrofit+Rxjava", 8));
         mData.add(new mainBean("双表头上下左右滑动，并且合并行", 9));
         mData.add(new mainBean("水波纹加载进度", 10));
+        mData.add(new mainBean("类似探探卡片切换模式", 11));
         mAdapter = new MainAdapter(this, mData);
         mAdapter.setOnClick(new MainAdapter.OnClick() {
             @Override
@@ -118,6 +120,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case 10: //水波纹
                 startActivity(new Intent(this, WaveActivity.class));
+                break;
+            case 11: //探探卡片
+                startActivity(new Intent(this, CardDemoActivity.class));
                 break;
         }
     }

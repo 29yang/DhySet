@@ -1,1 +1,1 @@
-include ':app', ':refreshrvbaselibrary', ':mvplibrary', ':utilscorelibrary'
+include ':app', ':refreshrvbaselibrary', ':mvplibrary', ':utilscorelibrary', ':tantancarddemo'

@@ -45,4 +45,5 @@ dependencies {
     implementation project(':refreshrvbaselibrary')
     implementation project(':mvplibrary')
     implementation project(':utilscorelibrary')
+    implementation project(':tantancarddemo')
 }
