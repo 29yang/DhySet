@@ -101,6 +101,9 @@ public class CardLayoutManager extends RecyclerView.LayoutManager {
         public boolean onTouch(View v, MotionEvent event) {
             RecyclerView.ViewHolder childViewHolder = mRecyclerView.getChildViewHolder(v);
             if (MotionEventCompat.getActionMasked(event) == MotionEvent.ACTION_DOWN) {
+                //因为在自定义itemtouchhelper.callback中每次滑动后都取消了点击事件，
+                // 并且在isItemSwipeEnabled返回false禁止了item滑动操作，所以
+                // 在每次重新onLayoutChildren时对最上面的item添加点击事件开启滑动
                 mItemTouchHelper.startSwipe(childViewHolder);
             }
             return false;
