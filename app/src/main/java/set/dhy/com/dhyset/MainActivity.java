@@ -16,6 +16,7 @@ import android.support.v7.widget.RecyclerView;
 import android.widget.Toast;
 
 import com.dhy.utilscorelibrary.status_bar_util.StatusBarUtils;
+import com.example.picutils.PicActivity;
 import com.example.tantancarddemo.userecyclyview.CardDemoActivity;
 
 import java.util.ArrayList;
@@ -64,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
         mData.add(new mainBean("双表头上下左右滑动，并且合并行", 9));
         mData.add(new mainBean("水波纹加载进度", 10));
         mData.add(new mainBean("类似探探卡片切换模式", 11));
+        mData.add(new mainBean("图片相关功能", 12));
         mAdapter = new MainAdapter(this, mData);
         mAdapter.setOnClick(new MainAdapter.OnClick() {
             @Override
@@ -121,6 +123,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case 11: //探探卡片
                 startActivity(new Intent(this, CardDemoActivity.class));
+                break;
+            case 12: //图片相关功能
+                startActivity(new Intent(this, PicActivity.class));
                 break;
         }
     }
