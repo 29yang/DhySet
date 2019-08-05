@@ -132,11 +132,9 @@ public class RoundImageView extends android.support.v7.widget.AppCompatImageView
     @Override
     protected void onSizeChanged(int w, int h, int oldw, int oldh) {
         super.onSizeChanged(w, h, oldw, oldh);
-        // Log.d("mylog", "onSizeChanged: ");
         a = w;
         b = h;
         mRectF = new RectF(0, 0, w, h);
-        Log.d("mylog", "onSizeChanged: "+w+"-----"+h);
     }
 
 }
