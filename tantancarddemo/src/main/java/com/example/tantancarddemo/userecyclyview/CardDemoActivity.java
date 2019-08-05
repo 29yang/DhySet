@@ -8,7 +8,9 @@ import android.support.v7.widget.helper.ItemTouchHelper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.tantancarddemo.R;
@@ -18,6 +20,9 @@ import java.util.List;
 
 public class CardDemoActivity extends AppCompatActivity {
     private List<Integer> list = new ArrayList<>();
+    private Button mButton ;
+    private MyAdapter mAdapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,7 +33,8 @@ public class CardDemoActivity extends AppCompatActivity {
     private void initView() {
         final RecyclerView recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
-        recyclerView.setAdapter(new MyAdapter());
+        mAdapter = new MyAdapter();
+        recyclerView.setAdapter(mAdapter);
         CardItemTouchHelperCallback cardCallback = new CardItemTouchHelperCallback(recyclerView.getAdapter(), list);
         cardCallback.setOnSwipedListener(new OnSwipeListener<Integer>() {
 
@@ -72,6 +78,17 @@ public class CardDemoActivity extends AppCompatActivity {
         final CardLayoutManager cardLayoutManager = new CardLayoutManager(recyclerView, touchHelper);
         recyclerView.setLayoutManager(cardLayoutManager);
         touchHelper.attachToRecyclerView(recyclerView);
+
+        mButton = findViewById(R.id.button);
+        mButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(list.size()>0){
+
+                }
+            }
+        });
+
     }
 
 
