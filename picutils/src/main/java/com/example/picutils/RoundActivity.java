@@ -6,7 +6,7 @@ import android.view.ViewGroup;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
-import com.example.picutils.crop.RoundImageView;
+import com.example.picutils.cropdrag.RoundImageView;
 
 public class RoundActivity extends AppCompatActivity {
     RoundImageView mRoundImageView;

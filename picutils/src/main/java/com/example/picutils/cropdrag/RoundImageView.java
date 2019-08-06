@@ -1,4 +1,4 @@
-package com.example.picutils.crop;
+package com.example.picutils.cropdrag;
 
 /**
  * Created by dhy
@@ -15,7 +15,6 @@ import android.graphics.PaintFlagsDrawFilter;
 import android.graphics.Path;
 import android.graphics.RectF;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.View;
 
 import com.example.picutils.R;

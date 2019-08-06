@@ -17,5 +17,11 @@ public class PicActivity extends AppCompatActivity {
                 startActivity(new Intent(PicActivity.this,RoundActivity.class));
             }
         });
+        findViewById(R.id.btn_2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(PicActivity.this,CropActivity.class));
+            }
+        });
     }
 }

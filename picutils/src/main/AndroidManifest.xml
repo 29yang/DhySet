@@ -3,7 +3,8 @@
     package="com.example.picutils">
 
     <application>
-        <activity android:name=".RoundActivity"></activity>
+        <activity android:name=".CropActivity"></activity>
+        <activity android:name=".RoundActivity" />
         <activity android:name=".PicActivity" />
     </application>
 
