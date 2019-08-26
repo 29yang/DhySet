@@ -1,4 +1,4 @@
-package com.example.tantancarddemo.userecyclyview;
+package com.example.tantancarddemo.usertouchhelper;
 
 import android.graphics.Canvas;
 import android.support.annotation.NonNull;

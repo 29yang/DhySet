@@ -3,8 +3,10 @@
     package="com.example.tantancarddemo">
 
     <application>
-        <activity android:name=".useviewgroup.CardDemo2Activity"></activity>
-        <activity android:name=".userecyclyview.CardDemoActivity" />
+        <activity android:name=".usemytouch.CardDemo3Activity"></activity>
+        <activity android:name=".CardListDemoActivity" />
+        <activity android:name=".useviewgroup.CardDemo2Activity" />
+        <activity android:name=".usertouchhelper.CardDemoActivity" />
     </application>
 
 </manifest>
