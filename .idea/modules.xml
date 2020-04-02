@@ -2,13 +2,14 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/DhySet.iml" filepath="$PROJECT_DIR$/DhySet.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/mvplibrary/mvplibrary.iml" filepath="$PROJECT_DIR$/mvplibrary/mvplibrary.iml" />
-      <module fileurl="file://$PROJECT_DIR$/picutils/picutils.iml" filepath="$PROJECT_DIR$/picutils/picutils.iml" />
-      <module fileurl="file://$PROJECT_DIR$/refreshrvbaselibrary/refreshrvbaselibrary.iml" filepath="$PROJECT_DIR$/refreshrvbaselibrary/refreshrvbaselibrary.iml" />
-      <module fileurl="file://$PROJECT_DIR$/tantancarddemo/tantancarddemo.iml" filepath="$PROJECT_DIR$/tantancarddemo/tantancarddemo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/utilscorelibrary/utilscorelibrary.iml" filepath="$PROJECT_DIR$/utilscorelibrary/utilscorelibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DhySet.iml" filepath="$PROJECT_DIR$/DhySet.iml" group="DhySet" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="DhySet/app" />
+      <module fileurl="file://$PROJECT_DIR$/designpattern/designpattern.iml" filepath="$PROJECT_DIR$/designpattern/designpattern.iml" group="DhySet/designpattern" />
+      <module fileurl="file://$PROJECT_DIR$/mvplibrary/mvplibrary.iml" filepath="$PROJECT_DIR$/mvplibrary/mvplibrary.iml" group="DhySet/mvplibrary" />
+      <module fileurl="file://$PROJECT_DIR$/picutils/picutils.iml" filepath="$PROJECT_DIR$/picutils/picutils.iml" group="DhySet/picutils" />
+      <module fileurl="file://$PROJECT_DIR$/refreshrvbaselibrary/refreshrvbaselibrary.iml" filepath="$PROJECT_DIR$/refreshrvbaselibrary/refreshrvbaselibrary.iml" group="DhySet/refreshrvbaselibrary" />
+      <module fileurl="file://$PROJECT_DIR$/tantancarddemo/tantancarddemo.iml" filepath="$PROJECT_DIR$/tantancarddemo/tantancarddemo.iml" group="DhySet/tantancarddemo" />
+      <module fileurl="file://$PROJECT_DIR$/utilscorelibrary/utilscorelibrary.iml" filepath="$PROJECT_DIR$/utilscorelibrary/utilscorelibrary.iml" group="DhySet/utilscorelibrary" />
     </modules>
   </component>
 </project>

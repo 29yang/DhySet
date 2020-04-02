@@ -1,1 +1,2 @@
 include ':app', ':refreshrvbaselibrary', ':mvplibrary', ':utilscorelibrary', ':tantancarddemo', ':picutils'
+include ':designpattern'

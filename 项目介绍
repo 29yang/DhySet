@@ -7,6 +7,10 @@ utilscorelibrary:
                     ConverterUtil：类型转换器工具
 picutils  :  图片处理的相关 截取、二次采样、模糊化处理、缓存、动画展示
             RoundImageView: 实现圆角矩形，各种对边角处理的形状
+designpattern : 设计模式
+                celue：策略模式
+                observer：观察者模式
+                zhuangshimode:装饰者模式
 
 
 
